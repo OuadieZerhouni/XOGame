@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Game board layout -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="349dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/board_bg"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:rowCount="3">
+
+        <!-- Game board cells -->
+        <Button
+            android:id="@+id/button_00"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="0"
+            app:layout_row="0"
+            android:text="@string/empty"
+
+            />
+
+        <Button
+            android:id="@+id/button_01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="1"
+
+            android:text="@string/empty"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button_02"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="2"
+            android:text="@string/empty"
+            app:layout_row="0" />
+        <Button
+            android:id="@+id/button_10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="0"
+            android:text="@string/empty"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button_11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="1"
+            android:text="@string/empty"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button_12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="2"
+            android:text="@string/empty"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button_20"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+
+            android:textSize="40sp"
+            app:layout_column="0"
+            android:text="@string/empty"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/button_21"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="1"
+            android:text="@string/empty"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/button_22"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:onClick="onCellClicked"
+            android:textSize="40sp"
+            app:layout_column="2"
+            android:text="@string/empty"
+            app:layout_row="2" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Reset button -->
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onResetClicked"
+        android:text="back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

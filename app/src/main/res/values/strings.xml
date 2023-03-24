@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">XO Game</string>
+    <string name="O">O</string>
+    <string name="X">X</string>
+    <string name="empty"></string>
+    
+</resources>
